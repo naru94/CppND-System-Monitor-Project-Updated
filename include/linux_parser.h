@@ -7,7 +7,7 @@
 
 namespace LinuxParser {
 // Paths
-const std::string kProcDirectory{"/proc/"};
+const std::string kProcDirectory{"/proc/"}; 
 const std::string kCmdlineFilename{"/cmdline"};
 const std::string kCpuinfoFilename{"/cpuinfo"};
 const std::string kStatusFilename{"/status"};
@@ -19,13 +19,13 @@ const std::string kOSPath{"/etc/os-release"};
 const std::string kPasswordPath{"/etc/passwd"};
 
 // System
-float MemoryUtilization();
-long UpTime();
-std::vector<int> Pids();
-int TotalProcesses();
-int RunningProcesses();
-std::string OperatingSystem();
-std::string Kernel();
+float MemoryUtilization(); //done
+long UpTime(); //done
+std::vector<int> Pids();//done
+int TotalProcesses(); //done
+int RunningProcesses(); //done
+std::string OperatingSystem(); //done
+std::string Kernel(); //done
 
 // CPU
 enum CPUStates {
@@ -47,11 +47,12 @@ long ActiveJiffies(int pid);
 long IdleJiffies();
 
 // Processes
-std::string Command(int pid);
-std::string Ram(int pid);
-std::string Uid(int pid);
-std::string User(int pid);
-long int UpTime(int pid);
+float CpuUtilization_Process(int pid);
+std::string Command(int pid);  //done
+std::string Ram(int pid);  //done
+std::string Uid(int pid); //done
+std::string User(int pid);  //done
+long int UpTime(int pid);  //done
 };  // namespace LinuxParser
 
 #endif
